@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 2689037553342825214}
   - component: {fileID: 2689037553342825213}
   - component: {fileID: 2689037553342825212}
+  - component: {fileID: -8123173879421122630}
   - component: {fileID: 2689037553342825211}
   m_Layer: 7
   m_Name: Goblin
@@ -259,6 +260,19 @@ MonoBehaviour:
   patrolWaypoints:
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &-8123173879421122630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2689037553342825210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263185f28dfeace45985c7ee5c47c83b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _vision: {fileID: 2689037551823473363}
 --- !u!50 &2689037553342825211
 Rigidbody2D:
   serializedVersion: 4
