@@ -94,7 +94,8 @@ public class CharacterHealth : MonoBehaviour
     {
         if(_currenthealth <= 0)
         {
-            Destroy(gameObject);
+            IsDead = true;
+            _animator.SetTrigger("hasDied");
         }
     }
 
@@ -103,7 +104,10 @@ public class CharacterHealth : MonoBehaviour
         if (!IsImmune) 
         {
             CurrentHealth--;
-            _animator.SetTrigger("gotInjured");
+            if(CurrentHealth > 0)
+            {
+                _animator.SetTrigger("gotInjured");
+            }
             if(knockbackEnabled)
             {
                 Vector2 knockBack = ((Vector2)transform.position - sourcePos + new Vector2(0, KNOCKBACK_Y_AXIS_FACTOR)).normalized * knockbackVelocity;
@@ -119,7 +123,10 @@ public class CharacterHealth : MonoBehaviour
             if (!IsImmune && (((1 << collision.gameObject.layer) & enemyLayer.value) > 0) && collision.otherCollider == myHitbox) //check if bit of collision layer matches hurtfulLayers bit
             {
                 CurrentHealth--;
-                _animator.SetTrigger("gotInjured");
+                if (CurrentHealth > 0)
+                {
+                    _animator.SetTrigger("gotInjured");
+                }
                 if (knockbackEnabled)
                 {
                     Vector2 knockBack = ((Vector2)transform.position - (Vector2)collision.gameObject.transform.position + new Vector2(0, KNOCKBACK_Y_AXIS_FACTOR)).normalized * knockbackVelocity;

@@ -300,6 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackEnabled: 0
+  invisibilityOnInjured: 0
   knockbackVelocity: 200
   horizontalKnockbackModifier: 200
   startingHealth: 3
@@ -307,7 +308,7 @@ MonoBehaviour:
   myHitbox: {fileID: 2689037551823473364}
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!50 &2689037553342825211
 Rigidbody2D:
   serializedVersion: 4
