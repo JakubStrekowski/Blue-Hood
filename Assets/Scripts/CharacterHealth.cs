@@ -92,7 +92,7 @@ public class CharacterHealth : MonoBehaviour
 
     private void CheckDeath()
     {
-        if(_currenthealth < 0)
+        if(_currenthealth <= 0)
         {
             Destroy(gameObject);
         }
