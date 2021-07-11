@@ -157,6 +157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2689037552208284395}
   - component: {fileID: 2689037552208284396}
+  - component: {fileID: 285377494015646554}
   m_Layer: 9
   m_Name: AttackHitbox
   m_TagString: Untagged
@@ -194,6 +195,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0.4, y: 0}
   m_Size: {x: 1.1, y: 1}
   m_Direction: 1
+--- !u!114 &285377494015646554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2689037552208284394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a20e393684e58c84b8061847e009db69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterInfo: {fileID: 188134705783287801}
 --- !u!1 &2689037553342825210
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,6 +220,7 @@ GameObject:
   - component: {fileID: 2689037553342825213}
   - component: {fileID: 2689037553342825212}
   - component: {fileID: -8123173879421122630}
+  - component: {fileID: 188134705783287801}
   - component: {fileID: 2689037553342825211}
   m_Layer: 7
   m_Name: Goblin
@@ -222,7 +237,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2689037553342825210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.08, y: 1.09, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2689037551823473362}
@@ -241,7 +256,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91bbe4cd4cd0a024d95e36ca9e450a59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
   moveSpeed: 3
   characterPresenter: {fileID: 2689037551823473362}
   playerInSight: 0
@@ -273,6 +287,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _vision: {fileID: 2689037551823473363}
+--- !u!114 &188134705783287801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2689037553342825210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0ce26b9f68e894e97120913d46be02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackEnabled: 0
+  knockbackVelocity: 200
+  horizontalKnockbackModifier: 200
+  startingHealth: 3
+  _animator: {fileID: 2689037551823473365}
+  myHitbox: {fileID: 2689037551823473364}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!50 &2689037553342825211
 Rigidbody2D:
   serializedVersion: 4

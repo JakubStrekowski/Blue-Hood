@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5968092049356885445}
   - component: {fileID: 5968092049356885446}
+  - component: {fileID: -7145743175855286460}
   - component: {fileID: 5968092049356885447}
   - component: {fileID: 5968092049356885440}
   m_Layer: 6
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5968092049356885441}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.620225, y: -0.9866486, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5968092049753082174}
@@ -57,6 +58,28 @@ MonoBehaviour:
   groundDetector: {fileID: 5968092049356885440}
   characterPresenter: {fileID: 5968092049753082174}
   cameraLookPoint: {fileID: 5968092049999241403}
+--- !u!114 &-7145743175855286460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5968092049356885441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0ce26b9f68e894e97120913d46be02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackEnabled: 1
+  invisibilityOnInjured: 1
+  knockbackVelocity: 20
+  horizontalKnockbackModifier: 200000
+  startingHealth: 3
+  _animator: {fileID: 5968092049753082162}
+  myHitbox: {fileID: 5968092049753082173}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!50 &5968092049356885447
 Rigidbody2D:
   serializedVersion: 4
@@ -261,6 +284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5968092049976017137}
   - component: {fileID: 5968092049976017143}
+  - component: {fileID: 5997474167361370696}
   m_Layer: 8
   m_Name: AttackHitbox
   m_TagString: AttackHitBox
@@ -298,6 +322,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0.64, y: 0}
   m_Size: {x: 1.39, y: 0.9}
   m_Direction: 1
+--- !u!114 &5997474167361370696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5968092049976017138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a20e393684e58c84b8061847e009db69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterInfo: {fileID: -7145743175855286460}
 --- !u!1 &5968092049999241380
 GameObject:
   m_ObjectHideFlags: 0

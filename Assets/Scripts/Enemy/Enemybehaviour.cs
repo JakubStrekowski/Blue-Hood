@@ -14,10 +14,6 @@ public class Enemybehaviour : MonoBehaviour
 {
     [SerializeField]
     [Range(1, 10)]
-    private int health = 3;
-
-    [SerializeField]
-    [Range(1, 10)]
     private float moveSpeed = 3f;
 
     [SerializeField]
