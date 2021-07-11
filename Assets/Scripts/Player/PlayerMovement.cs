@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private float attackMoveSpeedModifier = 0.3f;
 
     [SerializeField]
-    [Range(7.0f, 17.0f)]
+    [Range(5.0f, 20.0f)]
     private float dashSpeed = 7f;
 
     [SerializeField]
