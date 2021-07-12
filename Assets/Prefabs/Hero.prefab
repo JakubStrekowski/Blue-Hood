@@ -51,9 +51,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxInputSpeed: 5
   attackMoveSpeedModifier: 0.3
-  dashSpeed: 15
+  dashSpeed: 20
   jumpSpeed: 18
-  timeToDoubleTap: 0.35
+  timeToDoubleTap: 0.2
   animator: {fileID: 5968092049753082162}
   rb: {fileID: 5968092049356885447}
   groundDetector: {fileID: 5968092049356885440}
@@ -93,9 +93,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267fd350a00660e4dac65de159f164d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectibleLayer:
-    serializedVersion: 2
-    m_Bits: 1024
 --- !u!50 &5968092049356885447
 Rigidbody2D:
   serializedVersion: 4

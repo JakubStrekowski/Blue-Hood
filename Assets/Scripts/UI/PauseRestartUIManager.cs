@@ -10,6 +10,8 @@ public class PauseRestartUIManager : MonoBehaviour
 
     public GameObject restartPanel;
 
+    public GameObject victoryPanel;
+
     [SerializeField]
     private CharacterHealth playerHealthInfo;
 
@@ -37,5 +39,11 @@ public class PauseRestartUIManager : MonoBehaviour
     private void ShowDeathPanel()
     {
         restartPanel.SetActive(true);
+    }
+
+    public void ShowVictoryPanel()
+    {
+        victoryPanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 }
